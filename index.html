@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Subtractive Training for Music Stem Insertion using Latent Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -65,7 +65,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">Institution Name<br>ISMIR 2024</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -122,24 +122,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,8 +130,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            We present Subtractive Training, a simple and novel method for synthesizing individual musical instrument stems given other instruments as context. This method pairs a dataset of complete music mixes with 1) a variant of the dataset lacking a specific stem, and 2) LLM-generated instructions describing how the missing stem should be reintroduced. We then fine-tune a pretrained text-to-audio diffusion model to generate the missing instrument stem, guided by both the existing stems and the text instruction. Our results demonstrate Subtractive Training's efficacy in creating authentic drum stems that seamlessly blend with the existing tracks. We also show that we can use the text instruction to control the generation of the inserted stem in terms of rhythm, dynamics, and genre, allowing us to modify the style of a single instrument in a full song while keeping the remaining instruments the same. Lastly, we extend this technique to MIDI formats, successfully generating compatible bass, drum, and guitar parts for incomplete arrangements.
         </div>
       </div>
     </div>
@@ -157,122 +138,131 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Audio files grid -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3">Subtractive Training Generation Examples</h2>
+    <div class="columns is-multiline">
+      <!-- Audio file placeholders -->
+      <!-- Column 1 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Background</h3>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/soft_acoustic_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/indie_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/latin_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/reggae_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/rock_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <!-- Column 2 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Target</h3>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/soft_acoustic_drums_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/indie_drums_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/latin_drums_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/reggae_drums_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/rock_drums_target.wav type="audio/mpeg"></audio>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+      <!-- Column 3 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Generated</h3>
+        <div class="audio-description">
+          <p class="is-size-7">Add soft acoustic drums to enhance emotion</p>
+          <audio controls><source src="static/drum_examples/soft_acoustic_drums_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">Add indie drums with punchy beats</p>
+          <audio controls><source src="static/drum_examples/indie_drums_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">Generate percussion with a lively Latin flair</p>
+          <audio controls><source src="static/drum_examples/latin_drums_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">Add reggae beats</p>
+          <audio controls><source src="static/drum_examples/reggae_drums_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">Add rock drums</p>
+          <audio controls><source src="static/drum_examples/rock_drums_output.wav" type="audio/mpeg"></audio>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End Aidio files grid -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+<!-- Audio files grid -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3">Subtractive Training Style Transfer Examples</h2>
+    <div class="columns is-multiline">
+      <!-- Audio file placeholders -->
+      <!-- Column 1 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Background</h3>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_background.wav" type="audio/mpeg"></audio>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_Transfer/soft_pop_to_reggae_background.wav" type="audio/mpeg"></audio>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_background.wav" type="audio/mpeg"></audio>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Target</h3>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_transfer/soft_pop_to_reggae_target.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_target.wav type="audio/mpeg"></audio>
+        </div>
+      </div>
+      <!-- Column 3 -->
+      <div class="column is-one-third">
+        <h3 class="title is-5">Generated</h3>
+        <div class="audio-description">
+          <p class="is-size-7">add jazzy drums</p>
+          <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">add reggae beats</p>
+          <audio controls><source src="static/drum_examples/style_transfer/soft_pop_to_reggae_output.wav" type="audio/mpeg"></audio>
+        </div>
+        <div class="audio-description">
+          <p class="is-size-7">add aggressive rock drums with cymbal crashes</p>
+          <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_output.wav" type="audio/mpeg"></audio>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- End Aidio files grid -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
