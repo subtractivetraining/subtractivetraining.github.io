@@ -134,4 +134,12 @@ body {
 }
 
 
+.audio-description {
+  margin-bottom: 1em; /* Add space between audio players */
+  padding-bottom: 1em; /* Space for the divider */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Soft line */
+}
 
+.audio-description:last-child {
+  border-bottom: none; /* Remove line from the last item */
+}
