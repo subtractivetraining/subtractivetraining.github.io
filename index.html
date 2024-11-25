@@ -139,6 +139,22 @@
 <!-- End paper abstract -->
 
 
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Subtractive Training Generation Examples</h2>
+        <div class="content has-text-justified">
+          <p>
+            In these examples, we take a full-mix song, remove the drums, and add in our own drum using our drum-insertion model. The drum insertion is guided by a text prompt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="container" id="abstractdiv">
   <table class="table table-responsive">
@@ -154,8 +170,8 @@
       <tr>
           <td class="desc">1</td> 
           <!-- 5 -->
-          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/rock_drums_background.wav" type="audio/mpeg"></audio></td>
           <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/rock_drums_target.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/rock_drums_background.wav" type="audio/mpeg"></audio></td>
           <!-- <td class="desc">Add rock drums</td> -->
           <td class="text-center">
             <audio controls class="sample_audio"><source src="static/drum_examples/rock_drums_output.wav" type="audio/mpeg"></audio>
@@ -164,8 +180,8 @@
       </tr>
       <tr>
           <td class="desc">2</td>
-          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/indie_drums_background.wav" type="audio/mpeg"></audio></td>
           <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/indie_drums_target.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/indie_drums_background.wav" type="audio/mpeg"></audio></td>
           <!-- <td class="desc">Add indie drums with punchy beats</td> -->
           <td class="text-center">
             <audio controls class="sample_audio"><source src="static/drum_examples/indie_drums_output.wav" type="audio/mpeg"></audio>
@@ -175,8 +191,8 @@
       <tr>
             <!-- <td class="desc">4</td> -->
             <td class="desc">3</td>
-            <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/reggae_drums_background.wav" type="audio/mpeg"></audio></td>
             <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/reggae_drums_target.wav" type="audio/mpeg"></audio></td>
+            <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/reggae_drums_background.wav" type="audio/mpeg"></audio></td>
             <!-- <td class="desc">Add reggae beats</td> -->
             <td class="text-center">
               <audio controls class="sample_audio"><source src="static/drum_examples/reggae_drums_output.wav" type="audio/mpeg"></audio>
@@ -187,8 +203,9 @@
           <!-- <td class="desc">1</td> -->
           <td class="desc">4</td>
 
-          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/soft_acoustic_drums_background.wav" type="audio/mpeg"></audio></td>
           <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/soft_acoustic_drums_target.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/soft_acoustic_drums_background.wav" type="audio/mpeg"></audio></td>
+
           <!-- <td class="desc">Add soft acoustic drums to enhance emotion</td> -->
           <td class="text-center">
             <audio controls class="sample_audio"><source src="static/drum_examples/soft_acoustic_drums_output.wav" type="audio/mpeg"></audio>
@@ -198,29 +215,100 @@
       <tr>
           <!-- <td class="desc">3</td> -->
           <td class="desc">5</td>
-          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/latin_drums_background.wav" type="audio/mpeg"></audio></td>
           <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/latin_drums_target.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/drum_examples/latin_drums_background.wav" type="audio/mpeg"></audio></td>
           <!-- <td class="desc">Generate percussion with a lively Latin flair</td> -->
           <td class="text-center">
             <audio controls class="sample_audio"><source src="static/drum_examples/latin_drums_output.wav" type="audio/mpeg"></audio>
             <p class="is-size-7">Generate percussion with a lively Latin flair</p>
           </td>
       </tr>
-
-     
       </tbody>
   </table>
 </div>
 
 
 
-<!-- Audio files grid -->
+
+
+
 <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Subtractive Training Style Transfer Examples</h2>
+        <div class="content has-text-justified">
+          <p>
+            We use our model to edit the drum stem of an existing song using a text prompt and substantially change its style. For instance, we can take reggae song, remove its drums, and replace them drums with `jazz drums'. This shows our method's ability to perform stem-wise editing, and combine genres in interesting ways.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <table class="table table-responsive">
+      <thead>
+      <tr class="text-center">
+          <td></td>
+          <td><b>Original Song</b></td>
+          <td><b>Remove Drums</b></td>
+          <td><b>Prompt for Drum Gen.</b></td>
+          <td><b>Add Drums Using Our Diffusion Model</b></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td class="desc">1</td> 
+          <!-- 5 -->
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_target.wav" type="audio/mpeg"></audio>
+            </td>
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_background.wav" type="audio/mpeg"></audio>
+          </td>
+          <td class="text-center">Add jazzy drums</td>
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/reggae_to_jazz_drums_output.wav" type="audio/mpeg"></audio>
+          </td>
+      </tr>
+      <tr>
+          <td class="desc">2</td>
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/soft_pop_to_reggae_target.wav" type="audio/mpeg"></audio>
+          </td>
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/soft_pop_to_reggae_background.wav" type="audio/mpeg"></audio>
+          </td>
+          <td class="text-center">Add reggae beats</td>
+          <td class="text-center">
+            <audio controls><source src="static/drum_examples/style_transfer/soft_pop_to_reggae_output.wav" type="audio/mpeg"></audio>
+          </td>
+          </tr>
+      <tr>
+            <!-- <td class="desc">4</td> -->
+            <td class="text-center">3</td>
+            <td class="text-center">
+              <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_target.wav" type="audio/mpeg"></audio>
+            </td>
+            <td class="text-center">
+              <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_background.wav" type="audio/mpeg"></audio>
+            </td>
+            <td class="text-center">Add aggressive rock drums with cymbal crashes.</td>
+            <td class="text-center">
+              <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_output.wav" type="audio/mpeg"></audio>
+            </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+
+<!-- Audio files grid -->
+<!-- <section class="section">
   <div class="container">
     <h2 class="title is-3">Subtractive Training Generation Examples</h2>
     <div class="columns is-multiline">
-      <!-- Audio file placeholders -->
-      <!-- Column 1 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song without Drums</h3>
         <div class="audio-description">
@@ -239,7 +327,6 @@
           <audio controls><source src="static/drum_examples/rock_drums_background.wav" type="audio/mpeg"></audio>
         </div>
       </div>
-      <!-- Column 2 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song with Drums</h3>
         <div class="audio-description">
@@ -258,7 +345,6 @@
           <audio controls><source src="static/drum_examples/rock_drums_target.wav" type="audio/mpeg"></audio>
         </div>
       </div>
-      <!-- Column 3 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song with Drums Generated using Our Model, with Text-Prompt</h3>
         <div class="audio-description">
@@ -284,16 +370,14 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End Aidio files grid -->
 
 <!-- Audio files grid -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <h2 class="title is-3">Subtractive Training Style Transfer Examples</h2>
     <div class="columns is-multiline">
-      <!-- Audio file placeholders -->
-      <!-- Column 1 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song without Drums</h3>
         <div class="audio-description">
@@ -306,7 +390,6 @@
           <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_background.wav" type="audio/mpeg"></audio>
         </div>
       </div>
-      <!-- Column 2 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song with Drums</h3>
         <div class="audio-description">
@@ -319,7 +402,6 @@
           <audio controls><source src="static/drum_examples/style_transfer/soft_to_aggressive_drums_target.wav" type="audio/mpeg"></audio>
         </div>
       </div>
-      <!-- Column 3 -->
       <div class="column is-one-third">
         <h3 class="title is-5">Song with Drums Generated Using our Model</h3>
         <div class="audio-description">
@@ -337,16 +419,33 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Subtractive Training MIDI</h2>
+        <div class="content has-text-justified">
+          <p>
+           To show the extensiveness of our subtractive training paradigm, we show that we can also do MIDI generation. We start with a MIDI file that is one instrument only, and generate another instrument on top of it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- End Aidio files grid -->
+
 
 
 <!-- MIDI files grid -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <h2 class="title is-3">Subtractive Training MIDI Examples</h2>
     
-    <!-- First Row -->
     <div class="columns is-multiline">
       <div class="column is-one-half">
         <h3 class="title is-5">Guitar Only</h3>
@@ -362,7 +461,6 @@
       </div>
     </div>
 
-    <!-- Second Row -->
     <div class="columns is-multiline">
       <div class="column is-one-half">
         <h3 class="title is-5">Drums Only</h3>
@@ -378,17 +476,57 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End MIDI files grid -->
- 
+<div class="container" id="abstractdiv">
+  <table class="table table-responsive">
+      <thead>
+      <tr class="text-center">
+          <td></td>
+          <td><b>Instrument</b></td>
+          <td><b>Single-Instrument MIDI</b></td>
+          <td><b>Added Instrument</b></td>
+          <td><b>Two-Instrument MIDI</b></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td class="desc"></td> 
+          <!-- 5 -->
+          <td class="text-center">Guitar</td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/midi_examples/0_Guitar_Only.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center">Bass</td>
+          <td class="text-center">
+            <audio controls class="sample_audio"><source src="static/midi_examples/0_Guitar_And_Bass.wav" type="audio/mpeg"></audio>
+            <p class="is-size-7">Add rock drums</p>
+          </td>
+      </tr>
+      <tr>
+          <td class="desc"></td>
+          <td class="text-center">Drums</td>
+          <td class="text-center"><audio controls class="sample_audio"><source src="static/midi_examples/177_Drums_Only.wav" type="audio/mpeg"></audio></td>
+          <td class="text-center">Guitar</td>
+          <!-- <td class="desc">Add indie drums with punchy beats</td> -->
+          <td class="text-center">
+            <audio controls class="sample_audio"><source src="static/midi_examples/177_Drums_and_Guitar.wav" type="audio/mpeg"></audio>
+            <p class="is-size-7">Add indie drums with punchy beats</p>
+          </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+
+
+
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
