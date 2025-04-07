@@ -144,10 +144,10 @@ body {
   border-bottom: none; /* Remove line from the last item */
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: center;
-}
+} */
 
 .table {
   margin: 0 auto;
